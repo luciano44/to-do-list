@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="icone.png" />
+    <link rel="stylesheet" href="style.css" />
+    <title>TO-DO and Done List</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <img id='todoLogo' title="To Do List Logo" alt="todo logo" srcset="https://to-do-cdn.microsoft.com/static-assets/c87265a87f887380a04cf21925a56539b29364b51ae53e089c3ee2b2180148c6/icons/logo.png">
+      TO DO LIST
+    </header>
+
+    <!-- MAIN -->
+
+    <div class="main">
+
+        <!-- MAIN CONTAINER -->
+      <div class="container">
+
+
+        <!-- DONE -->
+        <aside class="done boxes">
+          <div class="done-header">Done</div>
+          <div class="done-list">
+
+            <!--DONE ITEM
+            <div class="done-item">
+              <div class="done-item-top">
+                <p class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam corrupti architecto mollitia delectus repellendus magnam magni cum aliquid dicta omnis, soluta labore temporibus vero vel, voluptate iure id! Esse, blanditiis!</p>
+                <img src='http://simpleicon.com/wp-content/uploads/undo-6.png' class="undoImg"></img>
+              </div>
+              <p class="description">This is just an example text so please ignore me</p>
+            </div>
+          -->
+            
+          </div>
+
+        </aside>
+
+
+        <!-- TO DO -->
+        <article class="todo boxes">
+          <div class="todo-header">Create a Task</div>
+
+          <div class="todo-create">
+            <input maxlength="24" type="text" id="title" placeholder="Title" />
+            <div class="todo-create-bottom">
+                <textarea
+                id="description"
+                placeholder="Description"
+                cols="80"
+                rows="5"
+                maxlength="230"
+                ></textarea>
+                <button class="submit" onclick="Create()">Create</button>
+            </div>
+          </div>
+
+          <div class="todo-header">To Do</div>
+
+          <div class="todo-list">
+
+            <!--TODO ITEM
+            <div class="todo-item">
+                <div class="todo-item-top">
+                    <p class="title">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                    <button class="btnDone">Task Done</button>
+                </div>
+                
+                <p class="description">Lorem, ipsum dolor sit amet consectetur 
+                    adipisicing elit. Iusto quisquam, cum asperiores dolorem vel 
+                    corporis aliquam consequuntur et natus ex animi. Pariatur aperiam
+                    facilis porro possimus, est ex sint ipsam?</p>
+            </div>
+-->
+          </div>
+        </article>
+      </div>
+      <div class="toast">default!</div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
