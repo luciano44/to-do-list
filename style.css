@@ -5,15 +5,16 @@
 }
 
 :root{
-    --borderColor: rgb(219, 219, 219);
-    --bgColor: rgb(255, 255, 255);
-    --fontColor: rgb(79, 162, 218);
-    --titleColor: rgba(10, 9, 20, 0.795);
+    --borderColor: rgba(136, 173, 132, 0.623);
+    --bgColor: white;
+    --fontColor: rgba(33, 177, 33, 0.651);
+    --mainBgColor: rgba(0, 255, 34, 0.048);
+    --itemTextColor: rgba(37, 43, 37, 0.836);
 }
 
 body{
     position: relative;
-    background: rgba(0, 174, 255, 0.082);
+    background: white;
 }
 
 button{
@@ -22,10 +23,10 @@ button{
     justify-content: center;
     align-items: center;
     position: relative;
-    border: 1px solid lightblue;
+    border: 1px solid var(--fontColor);
     border-radius: 6px;
-    background: rgba(64, 224, 208, 0);
-    color: rgb(99, 170, 194);
+    background: transparent;
+    color: var(--fontColor);
     z-index: 0;
     overflow: hidden;
     transition: .3s;
@@ -46,13 +47,13 @@ button::before{
 }
 
 button:hover::before{
-    background: lightblue;
+    background: var(--fontColor);
     border-radius: 0 0 0 0;
     
 }
 
 button:hover{
-    text-shadow: 0 0 5px rgb(42, 104, 121);
+    text-shadow: 0 0 5px rgb(42, 121, 42);
     color: white;
 }
 
@@ -67,10 +68,13 @@ button:hover{
 
 .main{
     margin: 0 auto;
-    padding: 10px 15px 10px 15px;
+    padding: 10px 20px;
     height: auto;
     max-width: 1000px;
-    background: rgba(119, 169, 182, 0.171)
+    background: var(--mainBgColor);
+    border-left: 1px solid var(--borderColor);
+    border-right: 1px solid var(--borderColor);
+    box-shadow: 0 20px 15px rgba(8, 29, 13, 0.315);
 }
 
 .main-header{
@@ -80,9 +84,9 @@ button:hover{
     font-size: 28px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: var(--fontColor);
+    box-shadow: 0 0 10px rgba(18, 43, 18, 0.308);
     height: 90px;
     width: 100%;
-    background: linear-gradient(white,white,rgba(0, 140, 255, 0.116));
     border-bottom: 1px solid var(--borderColor);
     background-color: var(--bgColor);
 }
@@ -113,19 +117,7 @@ button:hover{
     border: 1px solid var(--borderColor);
 }
 
-.todo-header{
-    height: 50px;
-    width: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--fontColor);
-    font-style: italic;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 25px;
-}
-
-.done-header{
+.header{
     height: 50px;
     width: auto;
     display: flex;
@@ -169,6 +161,7 @@ button:hover{
     width: auto;
     padding: 10px;
     background-color: white;
+    color: var(--itemTextColor);
     margin: 5px 5px 0 5px;
     box-shadow: 5px 5px 15px rgba(128, 128, 128, 0.37);
     border: 1px solid rgb(212, 212, 212);
@@ -180,7 +173,7 @@ button:hover{
 }
 
 .done-item{
-    cursor: pointer;
+    color: var(--itemTextColor);
     transition: 0.5s;
     height: auto;
     padding: 2px;
@@ -302,6 +295,7 @@ button:hover{
 }
 
 .undoImg{
+    cursor: pointer;
     margin: 5px 5px 0 0;
     height: 20px;
     transition: 0.25s;
@@ -339,19 +333,14 @@ button:hover{
 
 
 
-
-
-
-
-
-
-
-
 @media (max-width: 600px) {
     .container{
         flex-direction: column;
     }
     .todo{
         order: -1;
+    }
+    .main{
+        padding: 2px 5px;
     }
 }
