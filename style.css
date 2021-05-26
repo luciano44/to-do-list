@@ -2,19 +2,20 @@
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
 }
 
 :root{
-    --borderColor: rgba(136, 173, 132, 0.623);
+    --borderColor: rgba(19, 59, 13, 0.37);
     --bgColor: white;
-    --fontColor: rgba(33, 177, 33, 0.651);
-    --mainBgColor: rgba(0, 255, 34, 0.048);
+    --fontColor: rgba(19, 59, 13, 0.952);
+    --mainBgColor: rgba(255, 255, 255, 0.021);
     --itemTextColor: rgba(37, 43, 37, 0.836);
 }
 
 body{
     position: relative;
-    background: white;
 }
 
 button{
@@ -24,7 +25,7 @@ button{
     align-items: center;
     position: relative;
     border: 1px solid var(--fontColor);
-    border-radius: 6px;
+    border-radius: 3px;
     background: transparent;
     color: var(--fontColor);
     z-index: 0;
@@ -67,40 +68,105 @@ button:hover{
 
 
 .main{
-    margin: 0 auto;
+    margin: 30px auto;
     padding: 10px 20px;
-    height: auto;
+    border-radius: 5px;
+    min-height: 1200px;
     max-width: 1000px;
     background: var(--mainBgColor);
     border-left: 1px solid var(--borderColor);
+    border-top: 1px solid var(--borderColor);
     border-right: 1px solid var(--borderColor);
-    box-shadow: 0 20px 15px rgba(8, 29, 13, 0.315);
+    box-shadow: 0 15px 20px rgba(17, 70, 29, 0.192);
 }
 
 .main-header{
+    padding: 0 30px;
+    margin: 0 auto;
+    max-width: 1000px;
+    font-weight: bold;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     font-size: 28px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: var(--fontColor);
-    box-shadow: 0 0 10px rgba(18, 43, 18, 0.308);
-    height: 90px;
+    height: 80px;
     width: 100%;
-    border-bottom: 1px solid var(--borderColor);
-    background-color: var(--bgColor);
+}
+
+
+.bar{
+    height: 15px;
+    width: 100%;
+    background: var(--bgColor);
+    background-image: linear-gradient(90deg, rgb(0, 255, 0) 0px, rgba(255, 255, 255, 0) 100%);
+    display: flex;
+}
+
+#logoWrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.menu-list{
+    font-weight: 100;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: auto;
+    padding: 0;
+}
+
+.menu-item{
+    display: flex;
+    margin-left: 10px;
+    padding: 3px;
+    align-items: center;
+    height: auto;
+    width: auto;
+    transition: .2s;
+    border-radius: 50%;
+}
+
+.menu-item:hover{
+    transform: scale(1.05);
+    background: rgba(30, 255, 0, 0.1);
+    box-shadow: 0 0 25px rgba(0, 255, 21, 0.2);
+}
+
+.social-title{
+    margin-left: 3px;
+    color: black;
+}
+
+.imgIcon{
+    height: 20px;
+}
+
+#todoTitle{
+    margin-top: 10px;
 }
 
 .done{
-    height: 1200px;
+    border-radius: 5px;
+    height: auto;
+    min-height: 1000px;
     min-width: 25%;
-    padding-top: 10px;
+    padding: 10px 5px;
+    box-shadow: 0 0 15px rgba(128, 128, 128, 0.24);
 }
 
 .todo{
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
-    height: 1200px;
+    height: auto;
+    min-height: 1000px;
     min-width: 75%;
     padding: 10px 20px 20px 20px;
 }
@@ -118,15 +184,15 @@ button:hover{
 }
 
 .header{
-    height: 50px;
+    min-height: 50px;
     width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--fontColor);
-    font-style: italic;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.164);
 }
 
 .todo-create{
@@ -163,7 +229,7 @@ button:hover{
     background-color: white;
     color: var(--itemTextColor);
     margin: 5px 5px 0 5px;
-    box-shadow: 5px 5px 15px rgba(128, 128, 128, 0.37);
+    box-shadow: 1px 1px 3px rgba(128, 128, 128, 0.30);
     border: 1px solid rgb(212, 212, 212);
     display: flex;
     align-items: flex-start;
@@ -182,7 +248,7 @@ button:hover{
     margin: 5px 0 0 0;
     background-color: white;
     margin: 5px 5px 0 5px;
-    box-shadow: 5px 5px 15px rgba(128, 128, 128, 0.37);
+    box-shadow: 1px 1px 3px rgba(128, 128, 128, 0.30);
     border: 1px solid rgb(212, 212, 212);
 }
 
@@ -339,8 +405,13 @@ button:hover{
     }
     .todo{
         order: -1;
+        min-height: auto;
+    }
+    .done{=
+        min-height: auto;
     }
     .main{
         padding: 2px 5px;
+        min-height: auto;
     }
 }
