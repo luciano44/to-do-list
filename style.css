@@ -16,7 +16,7 @@
 
 body{
     position: relative;
-    background: linear-gradient(white,rgba(224, 224, 224, 0.404));
+    background: linear-gradient(white,rgb(245,247,249),rgb(245,247,249))
 }
 
 button{
@@ -155,6 +155,7 @@ button:hover{
     min-height: 1000px;
     min-width: 25%;
     padding: 10px 5px;
+    box-shadow: 2px 2px 15px rgba(211, 211, 211, 0.25);
 }
 
 .todo{
@@ -165,6 +166,7 @@ button:hover{
     min-height: 1000px;
     min-width: 75%;
     padding: 10px 20px 20px 20px;
+    box-shadow: 2px 2px 15px rgba(211, 211, 211, 0.25);
 }
 
 .container{
