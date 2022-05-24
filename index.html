@@ -6,37 +6,55 @@
     <link rel="icon" href="img/" />
     <link rel="stylesheet" href="style.css" />
     <title>To-Do List</title>
-    <meta name="description" content="Create tasks and hit TASK DONE as you finish them.">
+    <meta
+      name="description"
+      content="Create tasks and hit TASK DONE as you finish them."
+    />
   </head>
   <body>
     <header class="main-header">
       <div id="logoWrap">
-        <img id='todoLogo' title="To Do List Logo" alt="todo logo" srcset="img/todo.ico">
+        <img
+          id="todoLogo"
+          title="To Do List Logo"
+          alt="todo logo"
+          srcset="img/todo.ico"
+        />
         TO DO LIST
       </div>
-      
-      
+
       <ul class="menu-list">
-        <li><a class="menu-item" href="https://github.com/luciano44"><img class='imgIcon' alt="GitHub Profile" srcset="https://image.flaticon.com/icons/png/512/25/25231.png"> <span class="social-title">GitHub</span></a></li>
-        <li><a class="menu-item" href="https://www.linkedin.com/in/luciano-ribeiro-925710187/"><img class='imgIcon' alt="LinkedIn Profile" srcset="https://image.flaticon.com/icons/png/512/61/61109.png"> <span class="social-title"> LinkedIn</span></a></li>
+        <li>
+          <a class="menu-item" href="https://github.com/luciano44"
+            ><img class="imgIcon" alt="GitHub Profile" srcset="./img/git.svg" />
+            <span class="social-title">GitHub</span></a
+          >
+        </li>
+        <li>
+          <a
+            class="menu-item"
+            href="https://www.linkedin.com/in/luciano-ribeiro-925710187/"
+            ><img
+              class="imgIcon"
+              alt="LinkedIn Profile"
+              srcset="./img/in.svg"
+            />
+            <span class="social-title"> LinkedIn</span></a
+          >
+        </li>
       </ul>
     </header>
-    <div class="bar">
-    </div>
-    
+    <div class="bar"></div>
+
     <!-- MAIN -->
 
     <div class="main">
-    
-        <!-- MAIN CONTAINER -->
+      <!-- MAIN CONTAINER -->
       <div class="container">
-
-
         <!-- DONE -->
         <aside class="done boxes">
           <div class="header">Done</div>
           <div class="done-list">
-
             <!--DONE ITEM
             <div class="done-item">
               <div class="done-item-top">
@@ -45,12 +63,8 @@
               </div>
               <p class="description">This is just an example text so please ignore me</p>
             </div>
-          -->
-            
-          </div>
-
+          --></div>
         </aside>
-
 
         <!-- TO DO -->
         <article class="todo boxes">
@@ -59,21 +73,20 @@
           <div class="todo-create">
             <input maxlength="24" type="text" id="title" placeholder="Title" />
             <div class="todo-create-bottom">
-                <textarea
+              <textarea
                 id="description"
                 placeholder="Description"
                 cols="80"
                 rows="5"
                 maxlength="230"
-                ></textarea>
-                <button class="submit" onclick="Create()">Create</button>
+              ></textarea>
+              <button class="submit" onclick="Create()">Create</button>
             </div>
           </div>
 
           <div class="header" id="todoTitle">To Do</div>
 
           <div class="todo-list">
-
             <!--TODO ITEM
             <div class="todo-item">
                 <div class="todo-item-top">
