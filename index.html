@@ -4,45 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="img/" />
+    <link rel="icon" type="image/x-icon" href="/img/todo.svg" />
+
     <link rel="stylesheet" href="style.css" />
-    <title>To-Do List</title>
+    <title>To-do List</title>
     <meta
       name="description"
       content="Create tasks and hit TASK DONE as you finish them."
     />
   </head>
   <body>
-    <header class="main-header">
-      <div id="logoWrap">
-        <img
-          id="todoLogo"
-          title="To Do List Logo"
-          alt="todo logo"
-          srcset="img/todo.ico"
-        />
-        TO DO LIST
-      </div>
+    <header>
+      <div class="main-header">
+        <div id="logoWrap">
+          <img
+            id="todoLogo"
+            title="To Do List Logo"
+            alt="todo logo"
+            srcset="img/todo.svg"
+          />
+          TO DO LIST
+        </div>
 
-      <ul class="menu-list">
-        <li>
-          <a class="menu-item" href="https://github.com/luciano44"
-            ><img class="imgIcon" alt="GitHub Profile" srcset="./img/git.svg" />
-            <span class="social-title">GitHub</span></a
-          >
-        </li>
-        <li>
-          <a
-            class="menu-item"
-            href="https://www.linkedin.com/in/luciano-ribeiro-925710187/"
-            ><img
-              class="imgIcon"
-              alt="LinkedIn Profile"
-              srcset="./img/in.svg"
-            />
-            <span class="social-title"> LinkedIn</span></a
-          >
-        </li>
-      </ul>
+        <ul class="menu-list">
+          <li>
+            <a class="menu-item" href="https://github.com/luciano44"
+              ><img
+                class="imgIcon"
+                alt="GitHub Profile"
+                srcset="./img/git.svg"
+              />
+              <span class="social-title">GitHub</span></a
+            >
+          </li>
+          <li>
+            <a
+              class="menu-item"
+              href="https://www.linkedin.com/in/luciano-ribeiro-925710187/"
+              ><img
+                class="imgIcon"
+                alt="LinkedIn Profile"
+                srcset="./img/in.svg"
+              />
+              <span class="social-title"> LinkedIn</span></a
+            >
+          </li>
+        </ul>
+      </div>
     </header>
     <div class="bar"></div>
 
@@ -54,16 +62,7 @@
         <!-- DONE -->
         <aside class="done boxes">
           <div class="header">Done</div>
-          <div class="done-list">
-            <!--DONE ITEM
-            <div class="done-item">
-              <div class="done-item-top">
-                <p class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam corrupti architecto mollitia delectus repellendus magnam magni cum aliquid dicta omnis, soluta labore temporibus vero vel, voluptate iure id! Esse, blanditiis!</p>
-                <img src='http://simpleicon.com/wp-content/uploads/undo-6.png' class="undoImg"></img>
-              </div>
-              <p class="description">This is just an example text so please ignore me</p>
-            </div>
-          --></div>
+          <div class="done-list"></div>
         </aside>
 
         <!-- TO DO -->
@@ -84,23 +83,9 @@
             </div>
           </div>
 
-          <div class="header" id="todoTitle">To Do</div>
+          <div class="header" id="todoTitle">To do</div>
 
-          <div class="todo-list">
-            <!--TODO ITEM
-            <div class="todo-item">
-                <div class="todo-item-top">
-                    <p class="title">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    <button class="btnDone">Task Done</button>
-                </div>
-                
-                <p class="description">Lorem, ipsum dolor sit amet consectetur 
-                    adipisicing elit. Iusto quisquam, cum asperiores dolorem vel 
-                    corporis aliquam consequuntur et natus ex animi. Pariatur aperiam
-                    facilis porro possimus, est ex sint ipsam?</p>
-            </div>
--->
-          </div>
+          <div class="todo-list"></div>
         </article>
       </div>
       <div class="toast">default!</div>
